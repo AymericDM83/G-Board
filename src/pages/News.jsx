@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const News = () => {
-  return <div>NEWS</div>;
+  return <Navbar />;
 };
 
 export default News;

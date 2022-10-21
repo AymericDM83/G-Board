@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Fun = () => {
-  return <div>Fun area</div>;
+  return <Navbar />;
 };
 
 export default Fun;

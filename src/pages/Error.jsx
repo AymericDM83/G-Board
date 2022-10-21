@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Error = () => {
-  return <div>Error</div>;
+  return <Navbar />;
 };
 
 export default Error;
