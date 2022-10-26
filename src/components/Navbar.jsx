@@ -67,20 +67,20 @@ const Navbar = () => {
           {!open && (
             <GiHamburgerMenu
               onClick={toggle}
-              className="text-3xl md:text-4xl transition-all"
+              className="text-3xl md:text-4xl transition-all cursor-pointer"
             />
           )}
           {open && (
             <AiOutlineClose
               onClick={toggle}
-              className="text-3xl md:text-4xl transition-all"
+              className="text-3xl md:text-4xl transition-all cursor-pointer"
             />
           )}
         </div>
       </div>
 
       {open && (
-        <div className="absolute bg-opacity-95 top-20 right-0 transition-all bg-gray-100 w-screen p-2 md:p-5 mt-10 text-xl md:text-3xl lg:hidden">
+        <div className="absolute z-20 bg-opacity-95 top-20 right-0 transition-all bg-gray-100 w-screen p-2 md:p-5 mt-5 text-xl md:text-3xl lg:hidden">
           <NavLink to="/" end>
             <p className="text-gray-500 font-semibold p-3 hover:text-indigo-500">
               Weather
