@@ -69,7 +69,7 @@ const News = () => {
         {isFetching ? (
           <div className="flex flex-col justify-center items-center text-indigo-500 py-20 mt-20">
             <AiOutlineLoading3Quarters className="animate-spin text-9xl " />
-            <p className="animate-pulse text-indigo-500 text-5xl font-bold mt-10">
+            <p className="animate-pulse text-indigo-500 text-3xl md:text-5xl font-bold mt-10">
               Loading News ...
             </p>
           </div>
