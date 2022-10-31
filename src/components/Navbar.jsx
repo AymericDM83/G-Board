@@ -18,8 +18,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" relative lg:bg-gradient-to-t lg:from-gray-100 lg:to-white lg:h-screen text-indigo-500 p-5 lg:flex lg:flex-col lg:items-center lg:text-3xl lg:w-[150px]">
-      <div className="flex justify-between items-center lg:flex lg:flex-col">
+    <nav className=" relative lg:h-screen text-indigo-500 p-5 lg:flex lg:flex-col lg:items-center lg:text-3xl lg:w-[150px]">
+      <div className="lg:fixed flex justify-between items-center lg:flex lg:flex-col">
         <div>
           <FaGoodreads className="text-6xl md:text-7xl drop-shadow-xl lg:text-8xl lg:mb-10" />
         </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
             }
             end
           >
-            <BsFillEmojiLaughingFill className="text-5xl mb-2 " />
+            <BsFillEmojiLaughingFill className="text-5xl mb-2" />
             <p className="text-gray-500 font-semibold ">Fun area</p>
           </NavLink>
         </div>
@@ -67,13 +67,13 @@ const Navbar = () => {
           {!open && (
             <GiHamburgerMenu
               onClick={toggle}
-              className="text-3xl md:text-4xl transition-all cursor-pointer"
+              className="text-3xl md:text-4xl transition-all cursor-pointer hover:-translate-y-1 hover:scale-105"
             />
           )}
           {open && (
             <AiOutlineClose
               onClick={toggle}
-              className="text-3xl md:text-4xl transition-all cursor-pointer"
+              className="text-3xl md:text-4xl transition-all cursor-pointer hover:-translate-y-1 hover:scale-105"
             />
           )}
         </div>
