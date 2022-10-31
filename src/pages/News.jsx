@@ -15,11 +15,19 @@ const News = () => {
           <Title title="News" />
         </div>
 
-        <div className="p-5 flex flex-col justify-center items-center text-center [&>*]:w-[200px]">
+        <div className="p-5 flex flex-col justify-center items-center text-center [&>*]:w-full">
+          <div className="">
+            <div></div>
+            <div>
+              <p>NICE</p>
+              <p>BEAU</p>
+              <p>25°C</p>
+            </div>
+          </div>
+
+          {/* <div className="">CARD</div>
           <div className="">CARD</div>
-          <div className="">CARD</div>
-          <div className="">CARD</div>
-          <div className="">CARD</div>
+          <div className="">CARD</div> */}
         </div>
       </div>
     </div>

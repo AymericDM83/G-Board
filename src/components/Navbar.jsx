@@ -80,7 +80,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="absolute z-20 bg-opacity-95 top-20 right-0 transition-all bg-gray-100 w-screen p-2 md:p-5 mt-5 text-xl md:text-3xl lg:hidden">
+        <div className="absolute z-20 bg-opacity-95 top-20 right-0 transition-all bg-gray-100 w-screen py-2 text-center mt-5 text-xl h-[200px] md:text-3xl lg:hidden">
           <NavLink to="/" end>
             <p className="text-gray-500 font-semibold p-3 hover:text-indigo-500">
               Weather
