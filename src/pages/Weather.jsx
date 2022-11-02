@@ -68,7 +68,7 @@ const Weather = () => {
                 <img
                   src={`http://openweathermap.org/img/wn/${locationData?.weather[0]?.icon}@2x.png`}
                   alt="weather-icon"
-                  className="min-w-[130px] min-h-[130px]"
+                  className="min-w-[130px] min-h-[130px] animate-leftRight"
                 />
               </div>
               <div className="[&>*]:p-1">
