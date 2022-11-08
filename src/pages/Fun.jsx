@@ -10,20 +10,14 @@ import chuckNorrisPic from "../assets/img/chuck-norris.jpeg";
 
 const Fun = () => {
   const [chuckNorrisData, setChuckNorrisData] = useState([{}]);
-  const [breakingBadData, setBreakingBadData] = useState([{}]);
   const [excuseData, setExcuseData] = useState([{}]);
-  const [funFactData, setFunFactData] = useState([{}]);
 
   const chuckNorrisRequest = axios.get(
     "https://api.chucknorris.io/jokes/random"
   );
-  const breakingBadRequest = axios.get(
-    "https://www.breakingbadapi.com/api/character/random"
-  );
   const excuseRequest = axios.get(
     "https://excuser.herokuapp.com/v1/excuse/office/"
   );
-  const funFactRequest = axios.get("https://asli-fun-fact-api.herokuapp.com");
 
   const [isFetching, setIsFetching] = useState(null);
 
@@ -31,18 +25,11 @@ const Fun = () => {
     const getData = async () => {
       setIsFetching(true);
       await axios
-        .all([
-          chuckNorrisRequest,
-          breakingBadRequest,
-          excuseRequest,
-          funFactRequest,
-        ])
+        .all([chuckNorrisRequest, excuseRequest])
         .then(
           axios.spread((...res) => {
             setChuckNorrisData(res[0]);
-            setBreakingBadData(res[1]);
-            setExcuseData(res[2]);
-            setFunFactData(res[3]);
+            setExcuseData(res[1]);
           })
         )
         .catch((err) => console.log(err))
@@ -54,11 +41,11 @@ const Fun = () => {
   }, []);
 
   return (
-    <div className="lg:flex lg:flex-row">
+    <div className="lg:flex lg:flex-row max-w-[1440px] mx-auto">
       <div>
         <Navbar />
       </div>
-      <div className="lg:w-full">
+      <div className="lg:w-full animate-fadeIn">
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-center">
           <Topbar />
           <Title title="Fun area" />
@@ -72,7 +59,7 @@ const Fun = () => {
               </p>
             </div>
           ) : (
-            <div className="px-5 my-2">
+            <div className="px-5 my-10">
               <div className="flex flex-col justify-between items-center w-full bg-indigo-400 rounded-xl drop-shadow-lg my-5 p-2">
                 <p className="p-1 text-white font-bold text-xl text-center underline">
                   Random excuse for your boss
@@ -92,17 +79,6 @@ const Fun = () => {
                   {chuckNorrisData?.data?.value}
                 </p>
               </div>
-
-              <div className="flex flex-col justify-between items-center w-full bg-indigo-400 rounded-xl drop-shadow-lg my-5 p-2">
-                <p className="p-1 text-white font-bold text-xl text-center underline">
-                  Fun Fact
-                </p>
-                <p className="p-3 text-white font-semibold text-base text-center">
-                  {funFactData?.data?.data?.fact}
-                </p>
-              </div>
-
-              {/* <div className="flex flex-col justify-between w-full bg-gray-200 rounded-xl drop-shadow-lg my-5 p-2"></div> */}
             </div>
           )}
         </div>

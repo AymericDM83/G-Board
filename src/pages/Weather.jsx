@@ -12,41 +12,43 @@ const Weather = () => {
   const [city, setCity] = useState("");
   const [error, setError] = useState("");
 
-  const getLocationData = (event) => {
-    if (event.key === "Enter") {
-      axios
-        .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_WEATHERAPIKEY}`
-        )
-        .then((res) => {
-          setLocationData(res.data);
-          setCity("");
-          setError("");
-        })
-        .catch((err) => setError(err.code));
-    }
+  const getLocationData = () => {
+    axios
+      .get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_WEATHERAPIKEY}`
+      )
+      .then((res) => {
+        setLocationData(res.data);
+        setCity("");
+        setError("");
+      })
+      .catch((err) => setError(err.code));
   };
 
   return (
-    <div className="lg:flex lg:flex-row">
+    <div className="lg:flex lg:flex-row max-w-[1440px] mx-auto ">
       <div>
         <Navbar />
       </div>
-      <div className="lg:w-full">
+      <div className="lg:w-full animate-fadeIn">
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-start">
           <Topbar />
           <Title title="Weather" />
         </div>
 
-        <div className="px-5 mt-5 lg:mx-1 lg:pt-2 lg:pb-6">
+        <div className="px-5 mt-5 lg:mx-1 lg:pt-2 lg:pb-6 md:flex md:items-center">
           <input
             type="text"
             placeholder="Enter a city ..."
-            className="py-3 pl-2 pr-10 mr-2 bg-gray-200 rounded-xl drop-shadow-sm w-full text-xl"
+            className="py-3 pl-2 pr-10 mr-2 bg-gray-200 rounded-xl drop-shadow-sm w-full text-xl md:w-2/3 lg:w-4/5"
             onChange={(e) => setCity(e.target.value)}
-            value={city}
-            onKeyPress={getLocationData}
           />
+          <button
+            className="bg-indigo-400 p-3 mt-2 text-center text-white drop-shadow-sm text-2xl rounded-xl w-full hover:bg-indigo-300 transition-all md:w-1/3 md:mx-auto md:mt-0 lg:w-1/5 "
+            onClick={getLocationData}
+          >
+            Validate
+          </button>
         </div>
 
         {error === "ERR_BAD_REQUEST" ? (
@@ -58,11 +60,11 @@ const Weather = () => {
         )}
 
         {typeof locationData.main === "undefined" ? (
-          <div className="p-5 mt-5 text-2xl font-semibold text-center text-indigo-500">
-            <p>Put a city and press 'Enter'</p>
+          <div className="p-5 mt-5 text-2xl font-semibold text-center text-gray-700">
+            <p>Enter a city</p>
           </div>
         ) : (
-          <div className="p-5 flex flex-col justify-center items-center text-center [&>*]:w-full [&>*]:my-3 text-2xl [&>*]:drop-shadow-md lg:flex-row lg:flex-wrap lg:justify-evenly lg:items-stretch lg:[&>*]:w-5/12 lg:[&>*]:flex-grow lg:[&>*]:mx-1 lg:px-5 lg:py-2 [&>*]:lg:my-1">
+          <div className="p-5 flex flex-col justify-center items-center text-center [&>*]:w-full [&>*]:my-3 text-2xl [&>*]:drop-shadow-md lg:flex-row lg:flex-wrap lg:justify-evenly lg:items-stretch lg:[&>*]:w-5/12 lg:[&>*]:flex-grow lg:[&>*]:mx-1 lg:px-5 lg:py-2 [&>*]:lg:my-1 animate-fadeIn">
             <div className="flex flex-col md:flex-row justify-evenly items-center py-4 lg:py-10 text-white font-semibold bg-gray-400 rounded-xl lg:w-5/12 ">
               <div className="text-center">
                 <img

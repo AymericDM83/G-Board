@@ -21,12 +21,14 @@ const Navbar = () => {
     <nav className=" relative lg:h-screen text-indigo-500 p-5 lg:flex lg:flex-col lg:items-center lg:text-3xl lg:w-[150px]">
       <div className="lg:fixed flex justify-between items-center lg:flex lg:flex-col">
         <div>
-          <FaGoodreads className="text-6xl md:text-7xl drop-shadow-xl lg:text-8xl lg:mb-10" />
+          <NavLink to="/">
+            <FaGoodreads className="text-6xl md:text-7xl drop-shadow-xl lg:text-8xl lg:mb-10 transition-all hover:text-indigo-400" />
+          </NavLink>
         </div>
 
         <div className="hidden lg:flex lg:flex-col lg:justify-evenly lg:text-lg">
           <NavLink
-            to="/"
+            to="/weather"
             className={({ isActive }) =>
               isActive
                 ? "flex flex-col justify-center items-center rounded-xl p-3 mt-5 bg-gray-200 transition-all drop-shadow-lg scale-105"
@@ -80,21 +82,21 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="absolute z-20 bg-opacity-95 top-20 right-0 transition-all bg-gray-100 w-screen py-2 text-center mt-5 text-xl h-[200px] md:text-3xl lg:hidden">
-          <NavLink to="/" end>
-            <p className="text-gray-500 font-semibold p-3 hover:text-indigo-500">
+        <div className="absolute z-20 bg-opacity-95 top-20 right-0 transition-all bg-gray-100 w-screen py-2 text-center mt-5 text-4xl h-[89vh] md:text-3xl lg:hidden">
+          <NavLink to="/weather">
+            <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
               Weather
             </p>
           </NavLink>
 
           <NavLink to="/news">
-            <p className="text-gray-500 font-semibold p-3 hover:text-indigo-500">
+            <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
               News
             </p>
           </NavLink>
 
           <NavLink to="/fun">
-            <p className="text-gray-500 font-semibold p-3 hover:text-indigo-500">
+            <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
               Fun area
             </p>
           </NavLink>

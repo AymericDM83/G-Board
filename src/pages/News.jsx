@@ -28,11 +28,11 @@ const News = () => {
   }, [filterCategory]);
 
   return (
-    <div className="lg:flex lg:flex-row">
+    <div className="lg:flex lg:flex-row max-w-[1440px] mx-auto ">
       <div>
         <Navbar />
       </div>
-      <div className="lg:w-full">
+      <div className="lg:w-full animate-fadeIn">
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-center">
           <Topbar />
           <Title title="News" />
@@ -74,7 +74,7 @@ const News = () => {
             </p>
           </div>
         ) : (
-          <div className="p-5 flex flex-col justify-center items-center text-center [&>*]:w-full">
+          <div className="p-5 flex flex-col justify-center items-center text-center [&>*]:w-full animate-fadeIn">
             <div className="pt-4">
               {newsData.map((article, index) => {
                 return <NewsCard data={article} key={index} />;

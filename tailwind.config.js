@@ -16,9 +16,26 @@ module.exports = {
           "75%": { transform: "translateX(-10%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        loader: {
+          "0%": {
+            transform: "translateX(-800px) rotate(-540deg)",
+            opacity: "0",
+          },
+          "50%": { transform: "translateX(0) rotate(0deg)", opacity: "1" },
+          "70%": { transform: "rotate(0deg)", opacity: "1" },
+          "100%": { transform: "rotate(-360deg)", opacity: "0" },
+        },
+        fadeIn: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         leftRight: "leftRight 4s linear infinite",
+        loader: "loader 3s ease-out both",
+        fadeIn: "fadeIn 1.5s ease-in-out",
       },
     },
   },
