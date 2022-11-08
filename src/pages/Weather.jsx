@@ -13,9 +13,10 @@ const Weather = () => {
   const [error, setError] = useState("");
 
   const getLocationData = () => {
+    const apiKey = process.env.REACT_APP_API_WEATHERAPIKEY;
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_WEATHERAPIKEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
       )
       .then((res) => {
         setLocationData(res.data);
