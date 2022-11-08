@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
-import Topbar from "../components/Topbar";
 
 const Home = () => {
   const [loader, setLoader] = useState(true);
