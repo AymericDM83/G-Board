@@ -27,16 +27,14 @@ const Weather = () => {
       .catch((err) => setError(err.code));
   };
 
-  const [loader, setLoader] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 1500);
-  }, []);
+  // const [loader, setLoader] = useState(true);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoader(false);
+  //   }, 1500);
+  // }, []);
 
-  return loader ? (
-    <Loader />
-  ) : (
+  return (
     <div className="lg:flex lg:flex-row max-w-[1440px] mx-auto ">
       <div>
         <Navbar />

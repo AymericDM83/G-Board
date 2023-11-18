@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className=" relative lg:h-screen text-indigo-500 p-5 lg:flex lg:flex-col lg:items-center lg:text-3xl lg:w-[150px]">
       <div className="lg:fixed flex justify-between items-center lg:flex lg:flex-col">
         <div>
-          <NavLink to="/weather">
+          <NavLink to="/">
             <FaGoodreads className="text-6xl md:text-7xl drop-shadow-xl lg:text-8xl lg:mb-10 transition-all hover:text-indigo-400" />
           </NavLink>
         </div>

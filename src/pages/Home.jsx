@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 3000);
+    }, 1500);
   }, []);
 
   return loader ? (
