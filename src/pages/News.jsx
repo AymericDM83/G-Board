@@ -5,7 +5,6 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import NewsCard from "../components/NewsCard";
 import Title from "../components/Title";
-import Topbar from "../components/Topbar";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const News = () => {
@@ -34,7 +33,6 @@ const News = () => {
       </div>
       <div className="lg:w-full animate-fadeIn">
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-center">
-          <Topbar />
           <Title title="News" />
         </div>
 

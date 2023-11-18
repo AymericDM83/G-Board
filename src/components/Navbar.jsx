@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BsFillCloudSunFill,
-  BsNewspaper,
-  BsFillEmojiLaughingFill,
-} from "react-icons/bs";
+import { BsFillCloudSunFill, BsFillEmojiLaughingFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaGoodreads } from "react-icons/fa";
@@ -21,7 +17,7 @@ const Navbar = () => {
     <nav className=" relative lg:h-screen text-indigo-500 p-5 lg:flex lg:flex-col lg:items-center lg:text-3xl lg:w-[150px]">
       <div className="lg:fixed flex justify-between items-center lg:flex lg:flex-col">
         <div>
-          <NavLink to="/">
+          <NavLink to="/weather">
             <FaGoodreads className="text-6xl md:text-7xl drop-shadow-xl lg:text-8xl lg:mb-10 transition-all hover:text-indigo-400" />
           </NavLink>
         </div>
@@ -38,18 +34,6 @@ const Navbar = () => {
           >
             <BsFillCloudSunFill className="text-5xl mb-2 " />
             <p className="text-gray-500 font-semibold ">Weather</p>
-          </NavLink>
-          <NavLink
-            to="/news"
-            className={({ isActive }) =>
-              isActive
-                ? "flex flex-col justify-center items-center rounded-xl p-3 mt-5 bg-gray-200 transition-all drop-shadow-lg scale-105"
-                : "flex flex-col justify-center items-center rounded-xl p-3 mt-5 transition-all hover:bg-gray-200 hover:drop-shadow-lg hover:scale-105"
-            }
-            end
-          >
-            <BsNewspaper className="text-5xl mb-2 " />
-            <p className="text-gray-500 font-semibold ">News</p>
           </NavLink>
           <NavLink
             to="/fun"
@@ -86,12 +70,6 @@ const Navbar = () => {
           <NavLink to="/weather">
             <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
               Weather
-            </p>
-          </NavLink>
-
-          <NavLink to="/news">
-            <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
-              News
             </p>
           </NavLink>
 

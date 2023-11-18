@@ -27,13 +27,6 @@ const Home = () => {
             </div>
           </div>
         </NavLink>
-        <NavLink to="/news">
-          <div className="pt-5 pb-1 px-5">
-            <div className="py-6 px-3 drop-shadow-xl font-semibold text-white text-3xl text-center uppercase rounded-xl bg-gray-400 hover:bg-indigo-300 lg:px-10 lg:mx-1 transition-all">
-              <h2>NEWS</h2>
-            </div>
-          </div>
-        </NavLink>
         <NavLink to="/fun">
           <div className="pt-5 pb-1 px-5">
             <div className="py-6 px-3 drop-shadow-xl font-semibold text-white text-3xl text-center uppercase rounded-xl bg-gray-400 hover:bg-indigo-300 lg:px-10 lg:mx-1 transition-all">

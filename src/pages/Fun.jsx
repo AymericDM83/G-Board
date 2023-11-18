@@ -16,7 +16,7 @@ const Fun = () => {
     "https://api.chucknorris.io/jokes/random"
   );
   const excuseRequest = axios.get(
-    "https://excuser.herokuapp.com/v1/excuse/office/"
+    "https://excuser-three.vercel.app/v1/excuse/office"
   );
 
   const [isFetching, setIsFetching] = useState(null);

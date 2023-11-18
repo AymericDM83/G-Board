@@ -1,11 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { BsFillDropletFill, BsWind } from "react-icons/bs";
 
 import Navbar from "../components/Navbar";
 import Title from "../components/Title";
 import Topbar from "../components/Topbar";
+import Loader from "../components/Loader";
 
 const Weather = () => {
   const [locationData, setLocationData] = useState([{}]);
@@ -26,7 +27,16 @@ const Weather = () => {
       .catch((err) => setError(err.code));
   };
 
-  return (
+  const [loader, setLoader] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 1500);
+  }, []);
+
+  return loader ? (
+    <Loader />
+  ) : (
     <div className="lg:flex lg:flex-row max-w-[1440px] mx-auto ">
       <div>
         <Navbar />

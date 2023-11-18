@@ -33,8 +33,8 @@ module.exports = {
         },
       },
       animation: {
-        leftRight: "leftRight 4s linear infinite",
-        loader: "loader 3s ease-out both",
+        leftRight: "leftRight 2s ease-out infinite",
+        loader: "loader 1.5s ease-out both",
         fadeIn: "fadeIn 1.5s ease-in-out",
       },
     },
