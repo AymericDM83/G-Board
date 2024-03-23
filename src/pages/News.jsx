@@ -10,8 +10,6 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 const News = () => {
   const [newsData, setNewsData] = useState([]);
 
-  // const [filterCategory, setFilterCategory] = useState("all");
-
   const [isFetching, setIsFetching] = useState(null);
 
   useEffect(() => {
@@ -37,34 +35,6 @@ const News = () => {
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-center">
           <Title title="Space-news" />
         </div>
-
-        {/* <div className="p-5 w-full">
-          <label
-            htmlFor="category"
-            className="px-1 text-2xl text-indigo-400 font-semibold"
-          >
-            Category
-          </label>
-          <select
-            name="category"
-            id="category"
-            onChange={(e) => setFilterCategory(e.target.value)}
-            className="w-full text-xl p-2 drop-shadow-lg bg-gray-100 rounded-xl mt-3 [&>*]:text-xl"
-          >                                  
-            <option value="all">All</option>
-            <option value="national">Indian news</option>
-            <option value="business">Business</option>
-            <option value="sports">sports</option>
-            <option value="world">World</option>
-            <option value="politics">Politics</option>
-            <option value="technology">Technology</option>
-            <option value="startup">Startup</option>
-            <option value="entertainment">Entertainment</option>
-            <option value="miscellaneous">Miscellaneous</option>
-            <option value="science">Sciences</option>
-            <option value="automobile">Automobile</option>
-          </select>
-        </div> */}
 
         {isFetching ? (
           <div className="flex flex-col justify-center items-center text-indigo-500 py-20 mt-20">

@@ -48,18 +48,6 @@ const Navbar = () => {
             <FaSpaceShuttle className="text-5xl mb-2 " />
             <p className="text-gray-500 font-semibold ">Space-news</p>
           </NavLink>
-          <NavLink
-            to="/fun"
-            className={({ isActive }) =>
-              isActive
-                ? "flex flex-col justify-center items-center rounded-xl p-3 mt-5 bg-gray-200 transition-all drop-shadow-lg scale-105"
-                : "flex flex-col justify-center items-center rounded-xl p-3 mt-5 transition-all hover:bg-gray-200 hover:drop-shadow-lg"
-            }
-            end
-          >
-            <BsFillEmojiLaughingFill className="text-5xl mb-2" />
-            <p className="text-gray-500 font-semibold ">Fun area</p>
-          </NavLink>
         </div>
 
         <div className="lg:hidden">
@@ -89,12 +77,6 @@ const Navbar = () => {
           <NavLink to="/news">
             <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
               Space-news
-            </p>
-          </NavLink>
-
-          <NavLink to="/fun">
-            <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
-              Fun area
             </p>
           </NavLink>
         </div>

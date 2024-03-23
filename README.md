@@ -1,8 +1,8 @@
-# "G-BOARD", Dashboard with weather, news and fun
+# "G-BOARD", Dashboard with weather and space news
 
-Creation of a simple dashbord with News, Weather and Fun sections
+Creation of a simple dashbord with News and Weather pages
 
-API's used in this project: OpenWeatherMap, InshortNews, Excuser, ChuckNorris.io
+API's used in this project: OpenWeatherMap, SpaceflightnewsAPI
 
 ## Description
 

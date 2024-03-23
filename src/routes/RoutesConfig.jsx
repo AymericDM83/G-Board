@@ -11,7 +11,7 @@ const RoutesConfig = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/weather" element={<Weather />} />
-      <Route path="/fun" element={<Fun />} />
+      {/* <Route path="/fun" element={<Fun />} /> */}
       <Route path="/news" element={<News />} />
       <Route path="*" element={<Error />} />
     </Routes>

@@ -47,7 +47,6 @@ const Fun = () => {
       </div>
       <div className="lg:w-full animate-fadeIn">
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-center">
-          {/* <Topbar /> */}
           <Title title="Fun area" />
         </div>
         <div>
@@ -75,9 +74,14 @@ const Fun = () => {
                   alt="chuckNorrisPic"
                   className="w-1/3 rounded-l-xl h-full object-cover"
                 />
-                <p className="p-3 text-gray-700 h-max font-semibold text-base flex-grow text-center">
-                  {chuckNorrisData?.data?.value}
-                </p>
+                <div className="px-5 my-10">
+                  <p className="p-1 text-white font-bold text-xl text-center underline">
+                    Chuck Norris fact
+                  </p>
+                  <p className="p-3 text-gray-700 h-max font-semibold text-base flex-grow text-center">
+                    {chuckNorrisData?.data?.value}
+                  </p>
+                </div>
               </div>
             </div>
           )}
