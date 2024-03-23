@@ -34,8 +34,8 @@ module.exports = {
       },
       animation: {
         leftRight: "leftRight 2s ease-out infinite",
-        loader: "loader 1.5s ease-out both",
-        fadeIn: "fadeIn 1.5s ease-in-out",
+        loader: "loader 1.2s ease-out both",
+        fadeIn: "fadeIn 0.7s ease-in-out",
       },
     },
   },

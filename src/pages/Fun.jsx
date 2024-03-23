@@ -47,7 +47,7 @@ const Fun = () => {
       </div>
       <div className="lg:w-full animate-fadeIn">
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-center">
-          <Topbar />
+          {/* <Topbar /> */}
           <Title title="Fun area" />
         </div>
         <div>

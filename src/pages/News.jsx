@@ -8,9 +8,9 @@ import Title from "../components/Title";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const News = () => {
-  const [newsData, setNewsData] = useState([{}]);
+  const [newsData, setNewsData] = useState([]);
 
-  const [filterCategory, setFilterCategory] = useState("all");
+  // const [filterCategory, setFilterCategory] = useState("all");
 
   const [isFetching, setIsFetching] = useState(null);
 
@@ -18,13 +18,15 @@ const News = () => {
     const getNewsData = async () => {
       setIsFetching(true);
       await axios
-        .get(`https://inshorts.deta.dev/news?category=${filterCategory}`)
-        .then((res) => setNewsData(res.data.data))
+        .get(`https://api.spaceflightnewsapi.net/v4/articles/?limit=30`)
+        .then((res) => {
+          setNewsData(res.data.results);
+        })
         .catch((err) => console.log(err))
         .finally(() => setIsFetching(false));
     };
     getNewsData();
-  }, [filterCategory]);
+  }, [setNewsData]);
 
   return (
     <div className="lg:flex lg:flex-row max-w-[1440px] mx-auto ">
@@ -33,10 +35,10 @@ const News = () => {
       </div>
       <div className="lg:w-full animate-fadeIn">
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-center">
-          <Title title="News" />
+          <Title title="Space-news" />
         </div>
 
-        <div className="p-5 w-full">
+        {/* <div className="p-5 w-full">
           <label
             htmlFor="category"
             className="px-1 text-2xl text-indigo-400 font-semibold"
@@ -48,11 +50,11 @@ const News = () => {
             id="category"
             onChange={(e) => setFilterCategory(e.target.value)}
             className="w-full text-xl p-2 drop-shadow-lg bg-gray-100 rounded-xl mt-3 [&>*]:text-xl"
-          >
+          >                                  
             <option value="all">All</option>
             <option value="national">Indian news</option>
             <option value="business">Business</option>
-            <option value="sports">Sports</option>
+            <option value="sports">sports</option>
             <option value="world">World</option>
             <option value="politics">Politics</option>
             <option value="technology">Technology</option>
@@ -62,7 +64,7 @@ const News = () => {
             <option value="science">Sciences</option>
             <option value="automobile">Automobile</option>
           </select>
-        </div>
+        </div> */}
 
         {isFetching ? (
           <div className="flex flex-col justify-center items-center text-indigo-500 py-20 mt-20">

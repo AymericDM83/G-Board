@@ -41,7 +41,7 @@ const Weather = () => {
       </div>
       <div className="lg:w-full animate-fadeIn">
         <div className="lg:flex lg:flex-col lg:justify-between lg:items-start">
-          <Topbar />
+          {/* <Topbar /> */}
           <Title title="Weather" />
         </div>
 

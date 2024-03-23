@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFillCloudSunFill, BsFillEmojiLaughingFill } from "react-icons/bs";
+import { FaSpaceShuttle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaGoodreads } from "react-icons/fa";
@@ -28,7 +29,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? "flex flex-col justify-center items-center rounded-xl p-3 mt-5 bg-gray-200 transition-all drop-shadow-lg scale-105"
-                : "flex flex-col justify-center items-center rounded-xl p-3 mt-5 transition-all hover:bg-gray-200 hover:drop-shadow-lg hover:scale-105"
+                : "flex flex-col justify-center items-center rounded-xl p-3 mt-5 transition-all hover:bg-gray-200 hover:drop-shadow-lg "
             }
             end
           >
@@ -36,11 +37,23 @@ const Navbar = () => {
             <p className="text-gray-500 font-semibold ">Weather</p>
           </NavLink>
           <NavLink
+            to="/news"
+            className={({ isActive }) =>
+              isActive
+                ? "flex flex-col justify-center items-center rounded-xl p-3 mt-5 bg-gray-200 transition-all drop-shadow-lg scale-105"
+                : "flex flex-col justify-center items-center rounded-xl p-3 mt-5 transition-all hover:bg-gray-200 hover:drop-shadow-lg "
+            }
+            end
+          >
+            <FaSpaceShuttle className="text-5xl mb-2 " />
+            <p className="text-gray-500 font-semibold ">Space-news</p>
+          </NavLink>
+          <NavLink
             to="/fun"
             className={({ isActive }) =>
               isActive
                 ? "flex flex-col justify-center items-center rounded-xl p-3 mt-5 bg-gray-200 transition-all drop-shadow-lg scale-105"
-                : "flex flex-col justify-center items-center rounded-xl p-3 mt-5 transition-all hover:bg-gray-200 hover:drop-shadow-lg hover:scale-105"
+                : "flex flex-col justify-center items-center rounded-xl p-3 mt-5 transition-all hover:bg-gray-200 hover:drop-shadow-lg"
             }
             end
           >
@@ -70,6 +83,12 @@ const Navbar = () => {
           <NavLink to="/weather">
             <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
               Weather
+            </p>
+          </NavLink>
+
+          <NavLink to="/news">
+            <p className="text-gray-500 font-semibold py-8 px-3 hover:text-indigo-500">
+              Space-news
             </p>
           </NavLink>
 
