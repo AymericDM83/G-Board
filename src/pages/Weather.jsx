@@ -143,13 +143,6 @@ const Weather = () => {
                 <p>{parseInt(locationData?.wind?.speed * 3.6)} km/h </p>
               </div>
             </div>
-
-            <div className="flex flex-col justify-evenly items-center py-4 lg:py-10 text-white bg-indigo-300 rounded-xl text-2xl font-semibold ">
-              <div className="flex flex-col justify-between items-center py-5 [&>*]:p-1 ">
-                <p className="font-bold underline">Atmospheric pressure</p>
-                <p>{locationData?.main?.humidity} %</p>
-              </div>
-            </div>
           </div>
         )}
       </div>
